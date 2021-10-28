@@ -1,0 +1,3 @@
+function goTo(str,boolean){if(boolean){return window.open(str,"_blank");}
+window.location.href=str;}
+$(document).scroll(function(){var navbar=$('menu.superior .botoes');if($(document).scrollTop()>=200){navbar.addClass('fixo');}else{navbar.removeClass('fixo');navbar.fadeIn();}});$("[data-abrir]").on('click',function(){var a=$(this).attr("data-abrir");var b=$(document).find("[data-abrir-ref='"+a+"']");if(typeof b!==typeof undefined){var that=$(this);if(!that.hasClass("ativo")){that.attr("data-original",that.text());that.addClass("ativo");that.text("Fechar");b.slideDown("fast");}else{that.text(that.attr("data-original"));that.removeAttr("data-original");that.removeClass("ativo");b.slideUp("fast");}}});
